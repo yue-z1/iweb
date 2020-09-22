@@ -67,6 +67,49 @@
 	color: #00be56;
 	padding: 0  0.5em;
 }
+/* PHONE屏幕下的搜索条：LOGO + Search + Hamburger */
+@media screen and (max-width: 767px) {
+	.searchbar {
+		background: #00be56;
+		border-bottom: 3px solid #b3efc0;
+		height: 52px;
+		font-size: 1.15em;
+	}
+	.logo-container {
+		height: 52px;	/*容器的高大于内容的高，才可能有竖直居中问题*/
+		display: flex;	/*图片的容器显示模式变为：弹性盒子*/
+		align-items: center;  /*弹性盒子中的子元素居中对齐*/
+	}
+	.logo_reverse {
+		/* flex: 1; */
+		width: 100%;	/*正常情况下，控制弹性盒子中子元素的尺寸应该使用“弹性占比（flex）”即可——此方式只会拉伸图片的宽，而不改变的高，所以此处没有使用*/
+	}
+	.search {
+		position: relative;  /*相对定位—为放大镜提供定位参照物*/
+		margin-top: 10px;  /*为输入框竖直居中增加上间距*/
+		top: 0;		/*清除全局样式中定位相关修改*/
+		right: 0;	/*清除全局样式中定位相关修改*/
+	}
+	.search-input {
+		width: 100%;
+		padding: 0   3em   0   0.6em;
+		margin-right: 0;	/*清除之前对所有屏幕设定的间距*/
+	}
+	.search-button {
+		background: transparent;
+		color: #00be56;
+		top: -2px;
+	}
+	.hamburger {
+		color: #fff;
+		line-height: 52px;
+		font-size: 26px;
+	}
+	
+	.navbar {			/*临时，非永久*/
+		display: none;
+	}
+}
 
 /* 3.导航条 */
 .navbar {
