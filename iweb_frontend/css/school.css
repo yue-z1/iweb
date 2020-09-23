@@ -1,0 +1,42 @@
+.schoolbar>.container a,
+.schoolbar>.container span {
+	color: #999;
+}
+
+.schoolbar {
+	margin-top: 5px;
+}
+
+.address {
+	width: 800px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.address-items {
+	padding: 32px 0;
+	border-bottom: 1px dotted #ccc;
+}
+
+.fa-map-marker {
+	margin:0 70px 0;
+	color: #55C760;
+}
+
+.address-items>h3 {
+	font-size: 18px;
+	padding-left: 150px;
+	margin-top: -50px;
+	font-weight: lighter;
+	margin-bottom: 10px;
+	padding-bottom: 8px;
+}
+
+.address-items>p {
+	font-size: 10px;
+	color: #999;
+	padding-left: 150px;
+	margin-top: 10px;
+	line-height: 8px;
+}
