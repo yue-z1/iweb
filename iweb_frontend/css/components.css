@@ -403,7 +403,7 @@
 	}
 }
 /* 8.面包屑 */
-/* 在ul的尾部生成一个新的, */
+/*在ul的尾部生成一个新的子元素，清除所有的li浮动导致的ul高度丢失问题*/
 .breadcrumb ul:after{
 	content: '';
 	display: block;
@@ -421,4 +421,45 @@
 }
 .breadcrumb ul li a{
 	color: #999;
+}
+/* 9.分页条 */
+.pager{
+	padding: 3em 0;
+}
+.pager ul{
+	text-align: center;
+}
+.pager ul li{
+	/* 让li变为行内块，既可以多个li共处一行，也可以指定尺寸/间距 */
+	display: inline-block;
+	/* 此方式的不足：①老IE不支持 ②HTML中只要有空白字符，呈现时就会有一个空格 */
+	border: 1px solid #ddd;
+	padding: 0.3em 0.7em;
+	cursor: pointer;/*鼠标悬停在li上方时，光标变为小手*/
+}
+.pager ul li.active{
+background: #99d989;	
+border: 1px solid #99d989;
+cursor: default;
+}
+.pager ul li.disabled{
+	background: #f4f4f4;
+	cursor: default;
+}
+.pager ul li a{
+	color: #999;
+}
+.pager ul li.active a{
+	color: #fff;
+	/*将超链接的默认光标效果（小手）转换为平时效果*/
+	cursor: default;
+}
+.pager ul li.disabled a{
+	color: #ddd;
+	cursor: default;
+}
+/* 当鼠标悬停于非.active项/非.disabled项上方时，边缘变色 */
+.pager ul li:not(.active):hover,
+.pager ul li:not(.disabled):hover{
+	
 }
