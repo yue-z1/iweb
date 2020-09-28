@@ -459,7 +459,6 @@ cursor: default;
 	cursor: default;
 }
 /* 当鼠标悬停于非.active项/非.disabled项上方时，边缘变色 */
-.pager ul li:not(.active):hover,
 .pager ul li:not(.disabled):hover{
-	
+	border-color: #99d989;
 }
