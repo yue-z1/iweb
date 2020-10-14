@@ -4,6 +4,7 @@
   "description": "iWeb project backend data API subsystem",
   "main": "main.js",
   "scripts": {
+    "start": "node main.js",
     "test": "node ./test.js"
   },
   "repository": {

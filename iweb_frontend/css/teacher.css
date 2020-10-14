@@ -1,0 +1,106 @@
+/* 1.讲师类别 */
+.course-types {	
+	padding: .7em 1em;
+	font-size: 1.5em;
+	font-weight: lighter;
+	color: #555;
+    line-height: 0;
+	border-bottom: 1px dotted #ccc;
+    border-left: 3px solid #77c558;
+	margin-top: 1em;
+}
+
+ .course-types  span { 
+	float: left;	
+}
+.course-types  ul {
+	margin-left: 6em;
+}
+.course-types  ul:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.course-types  ul  li {
+	float: left;
+	padding: 0  1.5em;
+}
+.course-types  ul  li.active {
+	background: #00be56;
+}
+.course-types  ul  li.active  a {
+	color: #fff;
+} 
+
+/* 2.课程列表 */
+.course-list {
+	margin-top: 1.5em;
+}
+.course {
+	padding: 2em  0;
+	border-bottom: 1px dotted #ccc; /*圆点下边框*/
+}
+.course  .pic {
+	width: 170px;	/*图片充满一列*/
+	height: 230px;
+	/* max-width: 100%; */
+}
+.course  .details {
+	color: #555;
+	/*相对定位后成为“价格”的绝对定位参照物*/
+	position: relative; 
+}
+
+.course  .details  p {
+	line-height: 2em;
+	margin: 0;	/*取消p元素自带的margin*/
+	display: block;
+	font-size: 1.2em;
+}
+.course  .details  p1 {
+	line-height: 2em;
+	margin: 0;	/*取消p元素自带的margin*/
+	display: block;
+	font-size: .8em;
+	color: #888;
+}
+.course  .details h3 {
+	    font-size: 1.6em;
+	    font-weight: lighter;
+	    color: #f60;
+	    line-height: 30px;
+}
+
+/* PAD屏幕下，课程列表样式的调整 */
+@media screen and (min-width:768px) and (max-width:1023px){
+	.course .details  h3 {
+		margin: 0  0  0.8em;
+	}
+	.course  .details  p {
+		line-height: 1.7em;
+	}
+	
+}
+/* PHONE屏幕下，课程类别/课程列表样式的调整 */
+@media screen and  (max-width:767px){
+	.course-types  span {
+		float: none;
+	}
+	.course-types  ul {
+		margin-left: 0;
+		border: 1px solid #00BE56;
+		display: flex;  /*父元素采用弹性布局*/
+	}
+	.course-types  ul  li {
+		padding: 0;/*清除全局样式中添加的左右padding*/
+		flex: 1;/*弹性容器中的每个子元素指定弹性占比*/	
+		text-align: center;
+	}
+	
+	.course {
+		/* 相对定位，为“查看详情”按钮提供绝对定位的参照物 */
+		position: relative;
+		padding: 1em  0;
+	}
+	
+}

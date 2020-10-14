@@ -1,42 +1,68 @@
-.schoolbar>.container a,
-.schoolbar>.container span {
+body{
+	margin: 0;
+	font-size: 12px;
+	line-height: 24px;
+	color: #555;
+	background: #fcfcfc;
+}
+.breadcrumb{
+	line-height: 32px;
 	color: #999;
+	font-size: 14px;
+	margin-bottom: 25px;
 }
 
-.schoolbar {
-	margin-top: 5px;
-}
 
-.address {
+
+.address{
 	width: 800px;
-	height: 100%;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
 }
-
-.address-items {
-	padding: 32px 0;
+.address .clear{
+	clear: both;
+}
+.address .address_detail h3{
+	display: block;
+	font-weight: normal;
+	font-size: 1.5em;
+	color: #999999;
+}
+.address .address_detail p{
+	color: #999999;
+	font-size: 1.1em;
+}
+.clearfloat{
+	padding: 30px 0;
 	border-bottom: 1px dotted #ccc;
+	width: 100%;
+}
+.address .icon-location{
+	font-size: 5em;
+	color: #00BE56;
+	text-align: center;
+	line-height: 168px;
+}
+.allmap{
+	height: 171px;
+}
+@media screen and (max-width:768px){
+	.address .icon-location{
+		text-align: center;
+	}
+	.address .address_detail {
+		margin: 0 auto;
+	}
+	
+	.allmap{
+		width: 760px;
+		height: 171px;
+		margin: 0 auto;
+	}
+	.map{
+		width: 100%;
+	}
+	.text{
+		width: 100%;
+	}
 }
 
-.fa-map-marker {
-	margin:0 70px 0;
-	color: #55C760;
-}
-
-.address-items>h3 {
-	font-size: 18px;
-	padding-left: 150px;
-	margin-top: -50px;
-	font-weight: lighter;
-	margin-bottom: 10px;
-	padding-bottom: 8px;
-}
-
-.address-items>p {
-	font-size: 10px;
-	color: #999;
-	padding-left: 150px;
-	margin-top: 10px;
-	line-height: 8px;
-}

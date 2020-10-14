@@ -397,3 +397,9 @@
 	border-color: #99d989;
 } 
 
+.loading{
+	/*让img.loading水平居中显示*/
+	display: block;
+	margin: 0 auto;
+	width: 150px;
+}
